@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Nunito:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Grade Checker</title>
+</head>
+
+<body>
+    <nav class="nav-header">
+        <div class="app-title">
+            <i class="fa-solid fa-graduation-cap" style="color: #fbefe6;"></i>
+            <p>Student Grade Checker</p>
+        </div>
+        <div class="nav-icons">
+            <i class="fa-regular fa-sun"></i>
+            <i class="fa-regular fa-moon"></i>
+        </div>
+    </nav>
+    <header class="header">
+        <h1>Check Students Score & Get Grades Instantly</h1>
+        <p>Enter student details and score to calculate their grade and result </p>
+        <div class="header-icon">
+            <div class="line"></div>
+            <i class="fa-solid fa-graduation-cap" style="color: #3a2f2a;"></i>
+            <div class="line"></div>
+        </div>
+    </header>
+    <main>
+        <div class="details-card">
+            <nav>
+                <div class="details-cardicon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="details-cardheading">
+                    <h4>Student Information</h4>
+                    <p>Enter the student name and score</p>
+                </div>
+            </nav>
+            <section class="card contact-section">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Student Name</label>
+                            <div class="line-group">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" placeholder="Enter Student Full Name" required id="full-name">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>score (0 - 100)</label>
+                            <div class="line-group">
+                                <i class="fa-solid fa-calculator"></i>
+                                <input type="number" placeholder="Enter Score between 0 and 100" required id="score">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="calculate-buttons">
+                            <i class="fa-solid fa-calculator"></i> Calculate Grade
+                        </button>
+                        <button type="button" class="refresh-buttons">
+                            <i class="fa-solid fa-refresh"></i> Clear All
+                        </button>
+                    </div>
+                </form>
+                <section class="grading">
+                    <ul>
+                        <p><i class="fa-solid fa-circle-info"></i>Scoring Guide</p>
+                        <li>90 - 100 <span class="colon">:</span><span>Grade <span style="color: green;">A</span>
+                                (Excellent )</span></li>
+                        <li>80 - 89 <span class="colon">:</span><span>Grade <span style="color: blue;">B</span> (Very
+                                Good )</span></li>
+                        <li>70 - 79 <span class="colon">:</span><span> Grade <span style="color: orange;">C</span> (Good
+                                )</span></li>
+                        <li>60 - 69 <span class="colon">:</span><span>Grade <span style="color: orangered;">D</span>
+                                (Pass)</span></li>
+                        <li>0 - 59 <span class="colon">:</span><span style="color: red">Fail</span></li>
+                    </ul>
+                </section>
+        </div>
+        <div class="details-card hidden-mobile" id="result-card">
+            <nav>
+                <div class="details-cardicon" id="form-card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <div class="details-cardheading">
+                    <h4>Result</h4>
+                    <p>Here is the grade and result.</p>
+                </div>
+            </nav>
+            <section class="grades">
+                <div class="grade-container">
+                    <div class="grade-container2" id="grade">
+                        
+                    </div>
+                </div>
+                <h2 id="remark"></h2>
+                <p id="comment"></p>
+            </section>
+            <section class="name-section">
+                <div class="name-sectiondiv">
+                    <div class="name-sectionicon">
+                        <i class="fa-regular fa-user" style="color: #327bcf"></i>
+                    </div>
+                    <div class="name-sectiondetails">
+                        <p class="nameee">Student Name</p>
+                        <p id="name-summary"></p>
+                    </div>
+                </div>
+                <div class="name-sectiondiv">
+                    <div class="scoredivicon">
+                        <i class="fa-solid fa-calculator" style="color:#7350d4"></i>
+                    </div>
+                    <div class="name-sectiondetails">
+                        <p class="nameee">Score</p>
+                        <p id="mark"></p>
+                    </div>
+            </section>
+            <section class="result">
+                <div id="resulticon">
+                    <i class="fa-solid" id="result-icons"></i>
+                </div>
+                <div class="result-details">
+                    <p class="result-detailsdets">Result</p>
+                    <p id="status"></p>
+                </div>
+            </section>
+            <button id="back-btn" class="mobile-back-arrow"><i class="fas fa-chevron-left"></i>Go Back</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footericon">
+                <i class="fa-regular fa-lightbulb"></i>
+            </div>
+            <div class="footertext">
+                <p class="footertextbig">Remember</p>
+                <p class="footertextsmall">Grades are calculated based on the total score. Keep learning and aim for
+                    excellence.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
